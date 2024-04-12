@@ -1,5 +1,14 @@
+import { title } from 'process'
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement)
-root.render(<React.StrictMode></React.StrictMode>)
+
+//without jsx
+// const el = React.createElement('h1', {id:'title'}, 'Hello title')
+
+//with jsx
+const a = 10
+const el = <h1 id="title">Hello title, {a}</h1>
+root.render(<React.StrictMode>{el}</React.StrictMode>)
+
