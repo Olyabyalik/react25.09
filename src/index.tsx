@@ -4,9 +4,9 @@ import ReactDOM from 'react-dom/client'
 
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement)
 
-const App = () => {
+const Content = () => {
     return (
-        <div>
+        <React.Fragment>
             <h1>Hello title</h1>
             <p>
                 Lorem ipsum dolor, sit amet consectetur adipisicing elit.
@@ -20,7 +20,16 @@ const App = () => {
                 dolor error, aliquid nulla recusandae, ullam id magnam! Unde
                 repellat magni suscipit obcaecati molestias!
             </p>
-        </div>
+        </React.Fragment>
+    )
+}
+
+const App = () => {
+    return (
+        <>
+            <header />
+            <Content />
+        </>
     )
 }
 
