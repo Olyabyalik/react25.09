@@ -1,21 +1,21 @@
+import classes from './Header.module.scss'
+import clsx from 'clsx'
+
 type HeaderType = {
     title: string
     num?: number
-    bgColor: string
-    position?: boolean
 }
 
-const Header = (props: HeaderType) => {
-    const style = {
-        backgroundColor: props.bgColor,
-        color: props.position ? 'white' : 'black',
-        padding: '15px',
-    }
-
+const Header = ({ title, num }: HeaderType) => {
+    console.log(classes)
     return (
-        <h1 style={style}>
-            Hello world, {props.title}
-            {props.num}
+        <h1
+            className={clsx(`test ${classes.title}`, {
+                [classes.red]: num === 10,
+            })}
+        >
+            Hello world, {title}
+            {num}
         </h1>
     )
 }
